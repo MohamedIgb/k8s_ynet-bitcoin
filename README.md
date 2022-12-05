@@ -1,7 +1,7 @@
 # Kubernetes
 ### The repository includes two apps:
-	Ynet app: read the news from http://www.ynet.co.il/Integration/StoryRss2.xml and presents the news into HTML page.
-	Bitcoin app: present the current bitcoin price and stores it in redis database, and show the average price for last 10 minutes.
+* Ynet app: read the news from http://www.ynet.co.il/Integration/StoryRss2.xml and presents the news into HTML page.
+* Bitcoin app: present the current bitcoin price and stores it in redis database, and show the average price for last 10 minutes.
 
 ------------
 
