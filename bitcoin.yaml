@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bitcoin 
+  labels: 
+    role: deployment
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bitcoin 
+  template:
+    metadata:
+      labels:
+        app: bitcoin 
+    spec:
+      containers: 
+      - name: bitcoin 
+        image: mohammedig/bitcoin:latest
+        ports:
+        - containerPort: 5000
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: bitcoin
+spec:
+  type: ClusterIP
+  ports:
+  - port: 5000
+  selector:
+    app: bitcoin 
